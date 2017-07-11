@@ -1,6 +1,8 @@
-import React from      'react'
-import Head from       'next/head'
-import ReactGA from    'react-ga'
+import React from        'react'
+import Head from         'next/head'
+import {Helmet} from     'react-helmet'
+import ReactGA from      'react-ga'
+
 
 import stylesheet from 'styles/index.sass'
 
