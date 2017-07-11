@@ -1,26 +1,30 @@
-import React from  'react'
-import Link from   'next/link'
+import React, {Component} from 'react'
+import Link from               'next/link'
 
 import Layout from 'containers/Layout'
 
-const page = {
-  title:         'About - New Project',
-  description:   'This is a great new Project',
-  url:           'https://google.com',
-  facebookShare: 'static/images/meta/facebook_share.png',
-  twitterShare:  'static/images/meta/twitter_share.png',
-  favicon:       'static/images/meta/favicon.png'
-};
+export default class About extends Component {
+	constructor(props) {
+		super(props)
+	}
 
-export default() =>
+	componentDidMount() {
+		console.log("About Component mounted.")
+	}
+	render() {
+		return (
+			<div>
 
-<div>
+				<Layout>
+					<main>
+						<p>Sup about</p>
+						<Link href='/'>
+							<a>Back</a>
+						</Link>
+					</main>
+				</Layout>
 
-	<Layout>
-		<main>
-		<p>Sup about</p>
-    <Link href='/'><a>Back</a></Link>
-		</main>
-	</Layout>
-
-</div>
+			</div>
+		)
+	}
+}
