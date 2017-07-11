@@ -5,9 +5,9 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
+    "start": "next start -p $PORT",
+    "build-static": "next build && next export",
     "heroku-postbuild": "npm run build",
-    "start-heroku": "next start -p $PORT"
   },
   "engines": {
     "node": "6.9.x"
